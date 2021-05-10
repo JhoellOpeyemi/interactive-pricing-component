@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<title>Jhoell | Frontend Mentor | Interactive pricing component</title>
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<div class="intro text-center">
+					<h1 class="intro-header">Simple, traffic-based pricing</h1>
+					<p class="intro-p">
+						Sign-up for our 30-day trial. No credit card required.
+					</p>
+				</div>
+
+				<div class="price-component text-center">
+					<div class="price-range">
+						<p class="page-views"><span>100K</span> Pageviews</p>
+						<input type="range" min="1" max="36" value="16" class="slider" />
+						<p class="price flex">
+							<span class="amount">$16.00 </span>
+							<span class="period">/ month</span>
+						</p>
+					</div>
+
+					<div class="toggle-period">
+						<p>
+							<span class="monthly">Monthly Billing</span>
+							<span class="yearly flex">
+								<span class="toggle">
+									<span class="toggle-indicator"></span>
+								</span>
+								Yearly Billing
+								<span class="discount-span">
+									-25% <span class="discount">discount</span>
+								</span>
+							</span>
+						</p>
+					</div>
+
+					<div class="benefits">
+						<ul class="benefits-lists flex">
+							<li>Unlimited websites</li>
+							<li>100% data ownership</li>
+							<li>Email reports</li>
+						</ul>
+
+						<a href="#" class="cta">Start my trial</a>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+				Frontend Mentor</a
+			>
+			.Coded by <a href="#">Jhoell Opeyemi</a>.
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

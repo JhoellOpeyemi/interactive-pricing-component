@@ -262,13 +262,16 @@ main {
 	}
 }
 
-.attribution {
-	font-size: 0.75rem;
-	text-align: center;
-	margin: 2.6rem 0.4rem;
-}
-.attribution a {
-	color: hsl(228, 45%, 44%);
+footer {
+	.attribution {
+		font-size: 0.8rem;
+		text-align: center;
+		margin: 2.6rem 0.4rem;
+		line-height: 1.6;
+	}
+	.attribution a {
+		color: hsl(228, 45%, 44%);
+	}
 }
 
 @import 'media';

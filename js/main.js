@@ -24,6 +24,7 @@ function toggleBillings() {
 	setYearlyPrice();
 }
 
+// Monthly Price
 function setMonthlyPrice() {
 	if (range.value == 1) {
 		const color = `linear-gradient(
@@ -77,6 +78,7 @@ function setMonthlyPrice() {
 	}
 }
 
+// Yearly Price
 function setYearlyPrice() {
 	if (range.value == 1) {
 		if (toggle.classList.contains('active')) {

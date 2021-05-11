@@ -111,19 +111,8 @@
 						height: 2.625rem;
 
 						&:hover {
-							background: darken($color: $slider-bg, $amount: 17);
+							background-color: darken($color: $slider-bg, $amount: 17);
 						}
-
-						// &::after {
-						// 	content: '';
-						// 	position: absolute;
-						// 	top: 0;
-						// 	width: 100%;
-						// 	height: 100%;
-						// 	background-image: url(../images/icon-slider.svg);
-						// 	background-position: center;
-						// 	background-repeat: no-repeat;
-						// }
 					}
 				}
 			}
@@ -134,7 +123,7 @@
 				p {
 					span.monthly {
 						display: inline-block;
-						padding-left: 3.5rem;
+						padding-left: 5rem;
 					}
 
 					span.yearly {

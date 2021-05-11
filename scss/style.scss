@@ -20,19 +20,6 @@ body {
 	min-height: 100vh;
 	z-index: 2;
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: 5.5rem;
-		left: 50%;
-		width: 10rem;
-		height: 10rem;
-		background-image: url(../images/pattern-circles.svg);
-		background-repeat: no-repeat;
-		opacity: 0.7;
-		transform: translate(-50%);
-	}
-
 	&::after {
 		content: '';
 		position: absolute;
@@ -74,8 +61,12 @@ a {
 main {
 	color: $text;
 
+	// Header
 	.intro {
 		padding: 7rem 0 5rem 0;
+		background-image: url(../images/pattern-circles.svg);
+		background-repeat: no-repeat;
+		background-position: center;
 
 		h1 {
 			font-size: 1.5rem;
@@ -90,6 +81,7 @@ main {
 		}
 	}
 
+	// Price Component
 	.price-component {
 		background: $white;
 		padding: 3.75rem 0;
@@ -97,6 +89,7 @@ main {
 		border-radius: 15px;
 		box-shadow: 2px 4px 15px rgba($color: #000, $alpha: 0.1);
 
+		// Price per month or year
 		.price-range {
 			.page-views {
 				text-transform: uppercase;
@@ -109,8 +102,8 @@ main {
 				height: 0.7rem;
 				background: linear-gradient(
 					90deg,
-					$full-slider-bar 60%,
-					$empty-slider-bar 60%
+					$full-slider-bar 50%,
+					$empty-slider-bar 50%
 				);
 				opacity: 1;
 				transition: all $transition-delay;
@@ -123,31 +116,24 @@ main {
 					appearance: none;
 					width: 2.1rem;
 					height: 2.1rem;
-					background: $slider-bg;
+					background-image: url(../images/icon-slider.svg);
+					background-repeat: no-repeat;
+					background-position: center;
+					background-color: $slider-bg;
 					border-radius: 50%;
 					cursor: pointer;
 					box-shadow: 0px 10px 35px lighten($color: $slider-bg, $amount: 30);
 					transition: all $transition-delay;
 
 					&:hover {
-						background: darken($color: $slider-bg, $amount: 15);
+						background-color: darken($color: $slider-bg, $amount: 15);
 					}
-
-					// &::after {
-					// 	content: '';
-					// 	position: absolute;
-					// 	top: 0;
-					// 	width: 100%;
-					// 	height: 100%;
-					// 	background-image: url(../images/icon-slider.svg);
-					// 	background-position: center;
-					// 	background-repeat: no-repeat;
-					// }
 				}
 			}
 
 			p.price {
-				span.amount {
+				span.amount,
+				span.currency {
 					font-size: 2rem;
 					color: $cta-bg;
 					font-weight: 800;
@@ -159,6 +145,7 @@ main {
 			}
 		}
 
+		// Toggle monthly or yearly billing
 		.toggle-period {
 			margin: 2rem 0;
 
@@ -182,6 +169,25 @@ main {
 					transition: all $transition-delay;
 					cursor: pointer;
 
+					&.active {
+						background: $full-slider-bar;
+					}
+
+					input {
+						position: absolute;
+						left: 0;
+						top: 0;
+						opacity: 0;
+						width: 100%;
+						height: 100%;
+						cursor: pointer;
+						z-index: 2;
+					}
+
+					input:checked + .toggle-indicator {
+						transform: translateX(140%);
+					}
+
 					&-indicator {
 						position: absolute;
 						display: inline-block;
@@ -192,10 +198,6 @@ main {
 						background: $white;
 						border-radius: 50%;
 						transition: all $transition-delay;
-
-						&.active {
-							transform: translateX(140%);
-						}
 					}
 
 					&:hover {
@@ -219,6 +221,7 @@ main {
 			}
 		}
 
+		// Benefits
 		.benefits {
 			flex-direction: column;
 			padding-top: 2.5rem;
@@ -246,6 +249,8 @@ main {
 				padding: 1rem 0.3rem;
 				margin-top: 2.2rem;
 				border-radius: 2rem;
+				border: none;
+				cursor: pointer;
 				transition: all $transition-delay;
 
 				&:hover,

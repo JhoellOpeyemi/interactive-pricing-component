@@ -35,6 +35,7 @@
 							max="5"
 							value="3"
 							step="1"
+							aria-label="Slider for different prices"
 							class="slider"
 						/>
 						<p class="price flex">
@@ -50,7 +51,7 @@
 							<span class="monthly">Monthly Billing</span>
 							<span class="yearly flex">
 								<span class="toggle">
-									<input type="checkbox" />
+									<input type="checkbox" aria-label="Choose yearly billing" />
 									<span class="toggle-indicator"></span>
 								</span>
 								Yearly Billing
@@ -70,7 +71,9 @@
 						</ul>
 
 						<!-- Start trial cta -->
-						<button class="cta">Start my trial</button>
+						<button class="cta" aria-label="Start my trial">
+							Start my trial
+						</button>
 					</div>
 				</div>
 			</div>

@@ -24,8 +24,9 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/mobile-first-interactive-pricing-component-KE8l0ENQx
+
+- Live Site URL: https://jhoell-pricing-component.netlify.app/
 
 ## My process
 

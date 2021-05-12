@@ -175,18 +175,18 @@ main {
 					}
 
 					input {
+						appearance: none;
 						position: absolute;
 						left: 0;
 						top: 0;
-						opacity: 0;
 						width: 100%;
 						height: 100%;
 						cursor: pointer;
 						z-index: 2;
-					}
 
-					input:checked + .toggle-indicator {
-						transform: translateX(140%);
+						&:checked + .toggle-indicator {
+							transform: translateX(140%);
+						}
 					}
 
 					&-indicator {
